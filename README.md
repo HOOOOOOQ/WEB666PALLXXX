@@ -84,6 +84,9 @@ Konfigurasi bawaan sudah ada di [`vercel.json`](vercel.json)
 
 ### Cara 2 — CLI (dari laptop atau bahkan Termux)
 
+> Catatan: selama PR ke `main` belum merge, clone branch situsnya dulu:
+> `git clone -b arena/74abe853-web666pallxxx https://github.com/HOOOOOOQ/WEB666PALLXXX`
+
 ```bash
 npm i -g vercel
 vercel login          # otentikasi lewat browser

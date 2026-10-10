@@ -13,7 +13,8 @@ pkg install -y python nodejs git
 ## 2. Ambil kode
 
 ```bash
-git clone https://github.com/HOOOOOOQ/WEB666PALLXXX
+# PENTING: kode situs ada di branch arena/74abe853-web666pallxxx
+git clone -b arena/74abe853-web666pallxxx https://github.com/HOOOOOOQ/WEB666PALLXXX
 cd WEB666PALLXXX
 ```
 
