@@ -1,0 +1,13 @@
+{
+  "name": "web666pallxxx",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Situs resmi 666pallxXx — 666 FAMILY / 666 GVNK. Static site + procedural 3D dragon engine (vanilla JS).",
+  "scripts": {
+    "start": "python3 -m http.server 8080 --bind 0.0.0.0",
+    "test": "node tests/e2e-dom.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^25.0.0"
+  }
+}

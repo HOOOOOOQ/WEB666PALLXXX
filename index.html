@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#05060a">
+<title>666pallxXx — 666 FAMILY / 666 GVNK | Saluran Pall</title>
+<meta name="description" content="Situs resmi 666pallxXx dari 666 FAMILY / 666 GVNK. Semua saluran Pall: WhatsApp Channel, TikTok, Telegram, dan YouTube dalam satu tempat.">
+<meta name="author" content="666 FAMILY / 666 GVNK">
+<meta property="og:type" content="website">
+<meta property="og:title" content="666pallxXx — 666 FAMILY / 666 GVNK">
+<meta property="og:description" content="Saluran Pall: WhatsApp · TikTok · Telegram · YouTube. Naga 666 menjaga gerbang.">
+<meta property="og:locale" content="id_ID">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308090f'/%3E%3Ctext x='32' y='44' font-family='Arial Black,Arial' font-size='26' font-weight='900' fill='%23ff2b3d' text-anchor='middle'%3E666%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#beranda">Lewati ke konten</a>
+
+<!-- ============ SPLASH SCREEN ============ -->
+<div id="splash" class="splash" role="dialog" aria-label="Layar pembuka 666pallxXx">
+  <div class="sp-bg"></div>
+  <div class="sp-grid"></div>
+  <div class="sp-scan"></div>
+  <div class="sp-noise"></div>
+
+  <div class="sp-inner">
+    <div class="sp-sigil" aria-hidden="true">
+      <svg viewBox="0 0 300 300" class="sigil">
+        <defs>
+          <linearGradient id="sg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ff2b3d"/><stop offset="1" stop-color="#ffffff"/>
+          </linearGradient>
+        </defs>
+        <circle class="dr dr1" cx="150" cy="150" r="132" fill="none" stroke="url(#sg)" stroke-width="1.4"/>
+        <circle class="dr dr2" cx="150" cy="150" r="112" fill="none" stroke="#ff2b3d" stroke-width="0.9" stroke-dasharray="5 11"/>
+        <circle class="dr dr3" cx="150" cy="150" r="88" fill="none" stroke="rgba(233,238,255,.55)" stroke-width="0.8"/>
+        <path class="dr dr4" d="M150 44 L241 203 L59 203 Z" fill="none" stroke="#ff2b3d" stroke-width="1.6"/>
+        <path class="dr dr5" d="M150 256 L59 97 L241 97 Z" fill="none" stroke="rgba(233,238,255,.8)" stroke-width="1.6"/>
+        <path class="dr dr6" d="M96 150c14-30 40-46 54-46s40 16 54 46c-14 30-40 46-54 46s-40-16-54-46z" fill="none" stroke="rgba(255,43,61,.5)" stroke-width="1"/>
+        <g class="sparks">
+          <circle cx="150" cy="18" r="3" fill="#ff2b3d"/><circle cx="282" cy="150" r="3" fill="#e9eeff"/>
+          <circle cx="150" cy="282" r="3" fill="#ff2b3d"/><circle cx="18" cy="150" r="3" fill="#e9eeff"/>
+        </g>
+      </svg>
+      <div class="sp-eye"></div>
+    </div>
+
+    <p class="sp-kicker"><span class="ln"></span> 666 FAMILY &nbsp;/&nbsp; 666 GVNK <span class="ln"></span></p>
+    <h1 class="sp-title glitch" data-text="666pallxXx">666pallxXx</h1>
+    <p class="sp-sub">SALURAN PALL · WHATSAPP · TIKTOK · TELEGRAM · YOUTUBE</p>
+
+    <div class="sp-load">
+      <div class="sp-load-row">
+        <span id="sp-status" class="sp-status">MEMUAT INTI 666 …</span>
+        <span class="sp-num"><b id="sp-num">000</b><i>%</i></span>
+      </div>
+      <div class="sp-track"><div id="sp-bar" class="sp-bar"></div></div>
+    </div>
+
+    <button id="sp-enter" class="sp-enter" disabled>
+      <span>MASUK KE SARANG</span>
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button id="sp-skip" class="sp-skip">LEWATI INTRO ⟶</button>
+  </div>
+
+  <div class="sp-shutter"><i></i><i></i><i></i><i></i><i></i></div>
+</div>
+
+<!-- ============ KURSOR ============ -->
+<div id="cursor" class="cursor" aria-hidden="true"></div>
+<div id="cursor-ring" class="cursor-ring" aria-hidden="true"></div>
+
+<!-- ============ LATAR ============ -->
+<canvas id="ambient" class="ambient" aria-hidden="true"></canvas>
+<div class="bg-grain" aria-hidden="true"></div>
+
+<!-- ============ HEADER ============ -->
+<header id="hdr" class="hdr">
+  <div class="hdr-in">
+    <a href="#beranda" class="brand" aria-label="666pallxXx beranda">
+      <span class="brand-mark">
+        <svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true">
+          <path d="M20 3 36 12v16L20 37 4 28V12z" fill="none" stroke="rgba(233,238,255,.35)" stroke-width="1.4"/>
+          <path d="M12 15c3-4 6-5 8-5s5 1 8 5c-3 6-6 9-8 9s-5-3-8-9z" fill="none" stroke="#ff2b3d" stroke-width="1.6"/>
+          <circle cx="17.4" cy="16.4" r="1.5" fill="#ff2b3d"/><circle cx="22.6" cy="16.4" r="1.5" fill="#ff2b3d"/>
+        </svg>
+      </span>
+      <span class="brand-txt"><b>666pallxXx</b><i>666 FAMILY / 666 GVNK</i></span>
+    </a>
+
+    <nav class="nav" aria-label="Navigasi utama">
+      <a data-nav href="#beranda">Beranda</a>
+      <a data-nav href="#tentang">Tentang</a>
+      <a data-nav href="#saluran">Saluran</a>
+      <a data-nav href="#anggota">Anggota</a>
+      <a data-nav href="#galeri">Galeri</a>
+      <a data-nav href="#kode">Kode 666</a>
+      <a data-nav href="#gabung" class="nav-cta">Gabung</a>
+    </nav>
+
+    <div class="hdr-act">
+      <button id="sound-toggle" class="icon-btn" aria-pressed="false" aria-label="Nyalakan audio ambien">
+        <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      </button>
+      <button id="burger" class="burger" aria-expanded="false" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div id="progress" class="progress" aria-hidden="true"></div>
+</header>
+
+<div id="drawer" class="drawer" aria-label="Menu mobile">
+  <a href="#beranda"><i>01</i>Beranda</a>
+  <a href="#tentang"><i>02</i>Tentang</a>
+  <a href="#saluran"><i>03</i>Saluran</a>
+  <a href="#anggota"><i>04</i>Anggota</a>
+  <a href="#galeri"><i>05</i>Galeri</a>
+  <a href="#kode"><i>06</i>Kode 666</a>
+  <a href="#gabung" class="dr-cta"><i>07</i>Gabung Sekarang</a>
+  <div class="dr-socials">
+    <a href="https://whatsapp.com/channel/0029Vb9T7598PgsKcVNjKz1B" target="_blank" rel="noopener">WA</a>
+    <a href="https://tiktok.com/@palllikeyw" target="_blank" rel="noopener">TT</a>
+    <a href="https://t.me/uxpall" target="_blank" rel="noopener">TG</a>
+    <a href="https://www.youtube.com/@xPallOfficial" target="_blank" rel="noopener">YT</a>
+  </div>
+</div>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section id="beranda" class="hero">
+    <canvas id="dragon" class="dragon-canvas" aria-label="Naga 3D animasi realtime"></canvas>
+    <div class="hero-veil" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="dot"></span> 666 FAMILY · 666 GVNK · AKTIF
+      </div>
+
+      <h1 id="glitch-title" class="hero-title glitch" data-text="666pallxXx">
+        <span class="l1">666</span><span class="l2">pallxXx</span>
+      </h1>
+
+      <p class="hero-tag reveal">
+        Satu nama. Satu keluarga. Satu naga yang tidak pernah tidur.<br>
+        <b>SALURAN PALL</b> — pusat semua lini resmi 666.
+      </p>
+
+      <div class="hero-cta reveal">
+        <a class="btn btn-red" href="#saluran">
+          <span>LIHAT SEMUA SALURAN</span>
+          <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="#tentang"><span>TENTANG 666</span></a>
+      </div>
+
+      <div class="hero-mini reveal">
+        <a href="https://whatsapp.com/channel/0029Vb9T7598PgsKcVNjKz1B" target="_blank" rel="noopener" title="WhatsApp Channel Pall">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.8-.1 1.5z"/></svg>
+        </a>
+        <a href="https://tiktok.com/@palllikeyw" target="_blank" rel="noopener" title="TikTok Pall">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 2h-3v13.2a2.6 2.6 0 1 1-2.1-2.6v-3a5.6 5.6 0 1 0 5.1 5.6V9.1a6.8 6.8 0 0 0 4 1.3V7.4a3.9 3.9 0 0 1-4-3.9z"/></svg>
+        </a>
+        <a href="https://t.me/uxpall" target="_blank" rel="noopener" title="Telegram Pall">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.8 19c-.2 1-.9 1.3-1.8.8l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.4-4.9L18.4 6c.4-.3-.1-.5-.6-.2L6.9 12.6l-4.6-1.4c-1-.3-1-1 .2-1.5l18-6.9c.8-.3 1.6.2 1.4 1.5z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@xPallOfficial" target="_blank" rel="noopener" title="YouTube Pall">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.6-.5-5.3a2.8 2.8 0 0 0-2-2C18.8 4.2 12 4.2 12 4.2s-6.8 0-8.5.5a2.8 2.8 0 0 0-2 2C1 8.4 1 12 1 12s0 3.6.5 5.3a2.8 2.8 0 0 0 2 2c1.7.5 8.5.5 8.5.5s6.8 0 8.5-.5a2.8 2.8 0 0 0 2-2C23 15.6 23 12 23 12zM9.8 15.4V8.6l5.9 3.4z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-side">
+      <button id="btn-roar" class="pill pill-red"><span class="ico">🔥</span> AUMKAN NAGA</button>
+      <button id="btn-cam" class="pill"><span class="ico">🎥</span> <span id="cam-label">IKUTI KURSOR</span></button>
+      <div class="pill pill-static" id="clock">--:--:-- WIB</div>
+    </div>
+
+    <div class="hero-foot">
+      <span id="dragon-hud" class="hud">MEMUAT NAGA …</span>
+      <a href="#tentang" class="scroll-hint" aria-label="Gulir ke bawah">
+        <span class="mouse"><i></i></span>
+        <em>GULIR</em>
+      </a>
+      <span class="hud">GERAKKAN KURSOR · KLIK NAGA</span>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>666pallxXx</span><i>✦</i><span>666 FAMILY</span><i>✦</i><span>666 GVNK</span><i>✦</i>
+      <span>SALURAN PALL</span><i>✦</i><span>NAGA TIDAK PERNAH TIDUR</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- ============ TENTANG ============ -->
+  <section id="tentang" class="sec sec-about">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">01 — TENTANG</span>
+        <h2 class="sec-title">Bukan sekadar nama.<br><span class="red">Ini keluarga.</span></h2>
+        <p class="sec-lead">
+          <b>666pallxXx</b> lahir dari lingkaran kecil yang menolak bubar. Di bawah bendera
+          <b>666 FAMILY</b> dan <b>666 GVNK</b>, semua saluran dikumpulkan jadi satu pintu: konten,
+          kabar, jadwal live, dan tempat berkumpulnya orang-orang yang satu frekuensi.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <article class="about-card tilt reveal">
+          <span class="tilt-glow"></span>
+          <div class="ac-ico">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4 42 14v20L24 44 6 34V14z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M24 16v16m-8-8h16" stroke="#ff2b3d" stroke-width="2.4" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Satu Pintu</h3>
+          <p>Empat saluran resmi Pall dirangkum di satu tempat. Tidak ada lagi link palsu, tidak ada akun tiruan.</p>
+        </article>
+
+        <article class="about-card tilt reveal">
+          <span class="tilt-glow"></span>
+          <div class="ac-ico">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 30c6-12 12-18 16-18s10 6 16 18c-6 8-12 12-16 12S14 38 8 30z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="19" cy="28" r="2.4" fill="#ff2b3d"/><circle cx="29" cy="28" r="2.4" fill="#ff2b3d"/></svg>
+          </div>
+          <h3>Naga Penjaga</h3>
+          <p>Naga di situs ini dirender langsung di browser — 3D realtime, mengikuti kursor, dan mengaum saat dipanggil.</p>
+        </article>
+
+        <article class="about-card tilt reveal">
+          <span class="tilt-glow"></span>
+          <div class="ac-ico">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6 29 18l13 1-10 9 3 13-11-7-11 7 3-13L3 19l13-1z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>Loyal Tanpa Syarat</h3>
+          <p>666 GVNK berdiri di atas satu aturan: yang masuk keluarga, tidak ditinggal di tengah jalan.</p>
+        </article>
+
+        <article class="about-card tilt reveal">
+          <span class="tilt-glow"></span>
+          <div class="ac-ico">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="10" width="34" height="24" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="m18 18 12 4-12 4z" fill="#ff2b3d"/><path d="M16 40h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Konten Jalan Terus</h3>
+          <p>Live, klip pendek, momen komunitas, sampai arsip lama — semua mengalir lewat saluran resmi Pall.</p>
+        </article>
+      </div>
+
+      <div class="stats reveal">
+        <div class="stat"><b data-count="666">0</b><span>KODE KELUARGA</span></div>
+        <div class="stat"><b data-count="4">0</b><span>SALURAN RESMI</span></div>
+        <div class="stat"><b data-count="24" data-suffix="/7">0</b><span>NAGA SIAGA</span></div>
+        <div class="stat"><b data-count="100" data-suffix="%">0</b><span>LOYALITAS</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SALURAN ============ -->
+  <section id="saluran" class="sec sec-chan">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">02 — SALURAN PALL</span>
+        <h2 class="sec-title">Empat pintu. <span class="red">Satu keluarga.</span></h2>
+        <p class="sec-lead">Klik kartu untuk masuk ke saluran resmi. Semua tautan di bawah adalah milik <b>Pall</b> — 666pallxXx.</p>
+      </div>
+
+      <div class="chan-grid">
+        <a class="chan tilt reveal" data-net="wa" href="https://whatsapp.com/channel/0029Vb9T7598PgsKcVNjKz1B" target="_blank" rel="noopener">
+          <span class="tilt-glow"></span>
+          <span class="chan-num">01</span>
+          <span class="chan-ico">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.8-.1 1.5z"/></svg>
+          </span>
+          <span class="chan-body">
+            <h3>WhatsApp Channel</h3>
+            <p class="chan-handle">Saluran broadcast resmi Pall — pengumuman tercepat.</p>
+            <span class="chan-link">whatsapp.com/channel/0029Vb9T75…</span>
+          </span>
+          <span class="chan-go" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="chan tilt reveal" data-net="tt" href="https://tiktok.com/@palllikeyw" target="_blank" rel="noopener">
+          <span class="tilt-glow"></span>
+          <span class="chan-num">02</span>
+          <span class="chan-ico">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 2h-3v13.2a2.6 2.6 0 1 1-2.1-2.6v-3a5.6 5.6 0 1 0 5.1 5.6V9.1a6.8 6.8 0 0 0 4 1.3V7.4a3.9 3.9 0 0 1-4-3.9z"/></svg>
+          </span>
+          <span class="chan-body">
+            <h3>TikTok</h3>
+            <p class="chan-handle">Klip pendek, momen live, dan konten harian 666.</p>
+            <span class="chan-link">tiktok.com/@palllikeyw</span>
+          </span>
+          <span class="chan-go" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="chan tilt reveal" data-net="tg" href="https://t.me/uxpall" target="_blank" rel="noopener">
+          <span class="tilt-glow"></span>
+          <span class="chan-num">03</span>
+          <span class="chan-ico">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.8 19c-.2 1-.9 1.3-1.8.8l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.4-4.9L18.4 6c.4-.3-.1-.5-.6-.2L6.9 12.6l-4.6-1.4c-1-.3-1-1 .2-1.5l18-6.9c.8-.3 1.6.2 1.4 1.5z"/></svg>
+          </span>
+          <span class="chan-body">
+            <h3>Telegram</h3>
+            <p class="chan-handle">Ruang kumpul keluarga — arsip, diskusi, dan info internal.</p>
+            <span class="chan-link">t.me/uxpall</span>
+          </span>
+          <span class="chan-go" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="chan tilt reveal" data-net="yt" href="https://www.youtube.com/@xPallOfficial" target="_blank" rel="noopener">
+          <span class="tilt-glow"></span>
+          <span class="chan-num">04</span>
+          <span class="chan-ico">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.6-.5-5.3a2.8 2.8 0 0 0-2-2C18.8 4.2 12 4.2 12 4.2s-6.8 0-8.5.5a2.8 2.8 0 0 0-2 2C1 8.4 1 12 1 12s0 3.6.5 5.3a2.8 2.8 0 0 0 2 2c1.7.5 8.5.5 8.5.5s6.8 0 8.5-.5a2.8 2.8 0 0 0 2-2C23 15.6 23 12 23 12zM9.8 15.4V8.6l5.9 3.4z"/></svg>
+          </span>
+          <span class="chan-body">
+            <h3>YouTube</h3>
+            <p class="chan-handle">Video panjang, arsip live, dan konten resmi xPall.</p>
+            <span class="chan-link">youtube.com/@xPallOfficial</span>
+          </span>
+          <span class="chan-go" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <div class="chan-note reveal">
+        <p>⚠ Hanya empat tautan di atas yang resmi. Selain itu bukan bagian dari 666 FAMILY.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ANGGOTA ============ -->
+  <section id="anggota" class="sec sec-squad">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">03 — LINGKARAN DALAM</span>
+        <h2 class="sec-title">Yang menjaga <span class="red">nyala 666</span></h2>
+        <p class="sec-lead">Nama-nama di balik saluran Pall. Ganti isi kartu ini sesuai anggota asli keluargamu.</p>
+      </div>
+
+      <div class="squad-grid">
+        <article class="squad tilt reveal">
+          <span class="tilt-glow"></span>
+          <div class="sq-av" data-role="FOUNDER">
+            <svg viewBox="0 0 80 80" aria-hidden="true"><path d="M40 8 70 24v32L40 72 10 56V24z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M26 36c5-9 10-13 14-13s9 4 14 13c-5 9-10 13-14 13s-9-4-14-13z" fill="none" stroke="#ff2b3d" stroke-width="2"/><circle cx="35" cy="36" r="2.4" fill="#ff2b3d"/><circle cx="45" cy="36" r="2.4" fill="#ff2b3d"/></svg>
+          </div>
+          <h3>PALL</h3>
+          <span class="sq-role">Founder · Wajah 666</span>
+          <p>Pemegang kendali semua saluran. Suara yang paling sering terdengar saat live.</p>
+          <div class="sq-tags"><span>#666pallxXx</span><span>#GVNK</span></div>
+        </article>
+
+        <article class="squad tilt reveal">
+          <span class="tilt-glow"></span>
+          <div class="sq-av" data-role="CORE"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="30" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M40 18v44M18 40h44" stroke="#ff2b3d" stroke-width="2"/><circle cx="40" cy="40" r="10" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></div>
+          <h3>CORE 666</h3>
+          <span class="sq-role">Lingkaran Inti</span>
+          <p>Penjaga arah keluarga. Yang memutuskan sebelum semua bergerak.</p>
+          <div class="sq-tags"><span>#CORE</span><span>#FAMILY</span></div>
+        </article>
+
+        <article class="squad tilt reveal">
+          <span class="tilt-glow"></span>
+          <div class="sq-av" data-role="MEDIA"><svg viewBox="0 0 80 80" aria-hidden="true"><rect x="12" y="22" width="56" height="36" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m34 32 16 8-16 8z" fill="#ff2b3d"/></svg></div>
+          <h3>MEDIA DIV</h3>
+          <span class="sq-role">Konten &amp; Editing</span>
+          <p>Dapur klip TikTok, video YouTube, dan semua yang tayang ke publik.</p>
+          <div class="sq-tags"><span>#TIKTOK</span><span>#YOUTUBE</span></div>
+        </article>
+
+        <article class="squad tilt reveal">
+          <span class="tilt-glow"></span>
+          <div class="sq-av" data-role="MODS"><svg viewBox="0 0 80 80" aria-hidden="true"><path d="M40 12 62 20v22c0 14-10 22-22 26-12-4-22-12-22-26V20z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m30 40 8 8 14-16" fill="none" stroke="#ff2b3d" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>MODS 666</h3>
+          <span class="sq-role">Penjaga Gerbang</span>
+          <p>Yang memastikan Telegram dan WhatsApp Channel tetap bersih dari penyusup.</p>
+          <div class="sq-tags"><span>#TELEGRAM</span><span>#WHATSAPP</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALERI ============ -->
+  <section id="galeri" class="sec sec-gal">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">04 — GALERI</span>
+        <h2 class="sec-title">Arsip <span class="red">666</span></h2>
+        <p class="sec-lead">Sigil, identitas visual, dan satu panel langsung dari sarang naga.</p>
+      </div>
+
+      <div class="gal-grid">
+        <figure class="gal gal--live tilt reveal">
+          <div class="live-art" aria-hidden="true">
+            <div class="live-ring"></div>
+            <div class="live-ring live-ring2"></div>
+            <div class="live-eye"></div>
+            <div class="live-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="gal-live"><span class="rec"></span> LIVE · SARANG NAGA</div>
+          <figcaption>Naga 3D dirender realtime di beranda — ikuti kursor, klik untuk mengaum.</figcaption>
+        </figure>
+
+        <figure class="gal gal--sigil tilt reveal"><div class="sigil-art" data-v="1"></div><figcaption>SIGIL 666 · MATA NAGA</figcaption></figure>
+        <figure class="gal gal--type tilt reveal"><div class="type-art"><b>666</b><i>pallxXx</i></div><figcaption>IDENTITAS UTAMA</figcaption></figure>
+        <figure class="gal gal--grid tilt reveal"><div class="grid-art"></div><figcaption>GVNK PATTERN</figcaption></figure>
+        <figure class="gal gal--quote tilt reveal"><blockquote>“Yang masuk keluarga,<br>tidak ditinggal.”</blockquote><figcaption>KODE 666 · PASAL III</figcaption></figure>
+        <figure class="gal gal--chan tilt reveal">
+          <div class="chan-art">
+            <span>WA</span><span>TT</span><span>TG</span><span>YT</span>
+          </div>
+          <figcaption>EMPAT SALURAN RESMI</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KODE 666 ============ -->
+  <section id="kode" class="sec sec-code">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">05 — ATURAN</span>
+        <h2 class="sec-title">Kode <span class="red">666</span></h2>
+      </div>
+      <ol class="code-list">
+        <li class="reveal"><b>I</b><div><h3>Loyalitas dulu</h3><p>Keluarga di atas ego. Kalau sudah 666, jangan setengah-setengah.</p></div></li>
+        <li class="reveal"><b>II</b><div><h3>Hormati semua anggota</h3><p>Bercanda boleh, merendahkan tidak. Nama baik keluarga dijaga bersama.</p></div></li>
+        <li class="reveal"><b>III</b><div><h3>Tanpa drama, tanpa pengkhianat</h3><p>Masalah diselesaikan di dalam, bukan diumbar ke luar saluran.</p></div></li>
+        <li class="reveal"><b>IV</b><div><h3>Jaga rahasia keluarga</h3><p>Yang dibicarakan di Telegram, tetap di Telegram.</p></div></li>
+        <li class="reveal"><b>V</b><div><h3>Saling angkat</h3><p>Konten anggota didukung, live diramaikan, yang jatuh ditarik naik.</p></div></li>
+        <li class="reveal"><b>VI</b><div><h3>Naga adalah simbol kita</h3><p>Tenang sampai diganggu. Begitu terusik, seluruh keluarga bergerak.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ GABUNG ============ -->
+  <section id="gabung" class="sec sec-join">
+    <div class="wrap">
+      <div class="join-box reveal">
+        <div class="join-glow" aria-hidden="true"></div>
+        <span class="eyebrow">06 — GABUNG</span>
+        <h2 class="join-title">Masuk <span class="red">666 FAMILY</span></h2>
+        <p class="join-lead">
+          Ikuti saluran WhatsApp Channel Pall supaya tidak ketinggalan pengumuman,
+          lalu masuk ke Telegram untuk kumpul bareng keluarga.
+        </p>
+        <div class="join-cta">
+          <a class="btn btn-red btn-lg" href="https://whatsapp.com/channel/0029Vb9T7598PgsKcVNjKz1B" target="_blank" rel="noopener">
+            <span>GABUNG LEWAT WHATSAPP</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn-ghost btn-lg" href="https://t.me/uxpall" target="_blank" rel="noopener"><span>BUKA TELEGRAM</span></a>
+        </div>
+        <div class="join-row">
+          <a class="mini" href="https://tiktok.com/@palllikeyw" target="_blank" rel="noopener">TIKTOK · @palllikeyw</a>
+          <a class="mini" href="https://www.youtube.com/@xPallOfficial" target="_blank" rel="noopener">YOUTUBE · @xPallOfficial</a>
+          <button class="mini mini-copy" data-copy="666pallxXx" data-label="SALIN"><span class="copy-txt">SALIN</span> · 666pallxXx</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="ftr">
+  <div class="ftr-mark" aria-hidden="true">666</div>
+  <div class="wrap ftr-in">
+    <div class="ftr-col">
+      <a href="#beranda" class="brand brand--ftr">
+        <span class="brand-txt"><b>666pallxXx</b><i>666 FAMILY / 666 GVNK</i></span>
+      </a>
+      <p>Situs resmi saluran Pall. Dibuat dari dalam keluarga, untuk keluarga.</p>
+    </div>
+    <div class="ftr-col">
+      <h4>Jelajah</h4>
+      <a href="#tentang">Tentang</a><a href="#saluran">Saluran</a>
+      <a href="#anggota">Anggota</a><a href="#kode">Kode 666</a>
+    </div>
+    <div class="ftr-col">
+      <h4>Saluran Resmi</h4>
+      <a href="https://whatsapp.com/channel/0029Vb9T7598PgsKcVNjKz1B" target="_blank" rel="noopener">WhatsApp Channel ↗</a>
+      <a href="https://tiktok.com/@palllikeyw" target="_blank" rel="noopener">TikTok ↗</a>
+      <a href="https://t.me/uxpall" target="_blank" rel="noopener">Telegram ↗</a>
+      <a href="https://www.youtube.com/@xPallOfficial" target="_blank" rel="noopener">YouTube ↗</a>
+    </div>
+    <div class="ftr-col">
+      <h4>Status</h4>
+      <p class="ftr-status"><span class="dot"></span> Semua saluran aktif</p>
+      <p class="ftr-status"><span class="dot"></span> Naga: <b id="ftr-fps">siaga</b></p>
+      <p id="sound-label" class="ftr-status">AUDIO: MATI</p>
+    </div>
+  </div>
+  <div class="ftr-bar">
+    <span>© <span id="year">2026</span> 666pallxXx — 666 FAMILY / 666 GVNK. Semua hak dijaga keluarga.</span>
+    <span class="ftr-made">DIBUAT DENGAN API 🔥</span>
+  </div>
+</footer>
+
+<button id="to-top" class="to-top" aria-label="Kembali ke atas">
+  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script src="assets/js/dragon.js" defer></script>
+<script src="assets/js/ambient.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>
