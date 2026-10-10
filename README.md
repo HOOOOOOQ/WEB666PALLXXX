@@ -67,6 +67,42 @@ npm test
   marquee, scroll reveal, progress bar, dan footer watermark raksasa.
 - Responsif penuh + menghormati `prefers-reduced-motion`.
 
+## Deploy ke Vercel & pasang domain
+
+Situs ini static murni → Vercel bisa serve langsung dari repo ini tanpa build step.
+Konfigurasi bawaan sudah ada di [`vercel.json`](vercel.json)
+(clean URL, cache asset 1 tahun, header keamanan).
+
+### Cara 1 — Import dari GitHub (paling mudah, tanpa CLI)
+
+1. Buka <https://vercel.com/new> → login → **Import Git Repository** →
+   pilih `HOOOOOOQ/WEB666PALLXXX`.
+2. Framework Preset: **Other**. Build Command & Output Directory: **kosongkan**.
+3. **Deploy**. Dapat URL `https://<project>.vercel.app`.
+4. Pasang domain: **Project → Settings → Domains → Add** → ketik domainmu →
+   ikuti catatan DNS yang ditampilkan Vercel.
+
+### Cara 2 — CLI (dari laptop atau bahkan Termux)
+
+```bash
+npm i -g vercel
+vercel login          # otentikasi lewat browser
+cd WEB666PALLXXX
+vercel                # deploy preview
+vercel --prod         # deploy produksi
+vercel domains add <domain-kamu>   # ikat domain ke project ini
+```
+
+### DNS untuk domain
+
+| Tipe   | Name / Host | Value                    | Catatan                 |
+|--------|-------------|--------------------------|-------------------------|
+| `A`    | `@`         | `76.76.21.21`            | domain tanpa www        |
+| `CNAME`| `www`       | `cname.vercel-dns.com`   | subdomain www           |
+
+- SSL/HTTPS terbit otomatis beberapa menit setelah domain terverifikasi.
+- Panduan lengkap langkah Termux ada di [`TERMUX.md`](TERMUX.md).
+
 ## Kustomisasi Cepat
 
 - Section `#anggota` sengaja anonim (identitas disegel). Kalau mau menampilkan nama asli keluarga, ganti isi kartu di bagian itu (`index.html`).

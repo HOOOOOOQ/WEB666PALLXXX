@@ -20,9 +20,12 @@ const ctxStub = () => new Proxy({}, {
   set(t, prop, v) { t[prop] = v; return true; }
 });
 
-const html = fs.readFileSync('/home/user/WEB666PALLXXX/index.html', 'utf8');
-const dom = new JSDOM(html, {
-  url: 'http://localhost:8080/',
+// MODE=http (default, seperti di-serve) atau MODE=file (seperti dibuka langsung
+// di Termux / file manager Android tanpa server)
+const MODE = process.env.MODE || 'http';
+const FILE_PATH = new URL('../index.html', import.meta.url).pathname;
+const html = fs.readFileSync(FILE_PATH, 'utf8');
+const opts = {
   runScripts: 'dangerously',
   resources: 'usable',
   pretendToBeVisual: true,
@@ -31,7 +34,10 @@ const dom = new JSDOM(html, {
     window.HTMLCanvasElement.prototype.getContext = function () { return ctxStub(); };
     window.addEventListener('error', e => errors.push('window.onerror: ' + e.message));
   }
-});
+};
+const dom = MODE === 'file'
+  ? await JSDOM.fromFile(FILE_PATH, opts)
+  : new JSDOM(html, { ...opts, url: 'http://localhost:8080/' });
 const { window } = dom;
 const { document } = window;
 
@@ -85,6 +91,7 @@ for (const u of ['https://whatsapp.com/channel/0029Vb9T7598PgsKcVNjKz1B', 'https
   ok('tautan resmi ada: ' + u.split('/')[2], hrefs.includes(u));
 }
 
+console.log('MODE:', MODE);
 console.log(results.map(r => r[0] + '  ' + r[1]).join('\n'));
 console.log('\nERRORS (' + errors.length + '):');
 errors.slice(0, 12).forEach(e => console.log(' -', e));

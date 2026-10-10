@@ -8,6 +8,11 @@
   const $$ = (s, r) => Array.prototype.slice.call((r || document).querySelectorAll(s));
   const clamp = (v, a, b) => (v < a ? a : v > b ? b : v);
   const mq = (q) => !!(window.matchMedia && window.matchMedia(q).matches);
+  // penyimpanan aman: beberapa WebView / mode privat melempar exception
+  const store = {
+    get(k) { try { return window.localStorage ? window.localStorage.getItem(k) : null; } catch (e) { return null; } },
+    set(k, v) { try { if (window.localStorage) window.localStorage.setItem(k, v); } catch (e) { /* abaikan */ } }
+  };
   const reduceMotion = mq('(prefers-reduced-motion: reduce)');
 
   /* ==========================================================
@@ -158,7 +163,7 @@
       'MEMBANGKITKAN NAGA …', 'MENYALAKAN API …', 'SINKRON 666 FAMILY …',
       '666 GVNK SIAP …'
     ];
-    const visited = localStorage.getItem('666_visited') === '1';
+    const visited = store.get('666_visited') === '1';
     const total = visited ? 1200 : 2600;
     let p = 0, done = false, started = performance.now();
 
@@ -192,7 +197,7 @@
         const hero = $('#beranda');
         if (hero) hero.classList.add('hero--live');
       }, 1150);
-      localStorage.setItem('666_visited', '1');
+      store.set('666_visited', '1');
     }
     if (enter) enter.addEventListener('click', () => { if (done) closeSplash(); });
     if (skip) skip.addEventListener('click', closeSplash);
