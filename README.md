@@ -69,7 +69,7 @@ npm test
 
 ## Kustomisasi Cepat
 
-- Ganti nama anggota di bagian `#anggota` (`index.html`).
+- Section `#anggota` sengaja anonim (identitas disegel). Kalau mau menampilkan nama asli keluarga, ganti isi kartu di bagian itu (`index.html`).
 - Warna tema di `:root` pada `assets/css/style.css` (`--red`, `--bg`, dst.).
 - Perilaku naga di objek `S` dalam `frame()` pada `assets/js/dragon.js`
   (`girth`, `amp`, `waveK`, `flapW`, dll.).
